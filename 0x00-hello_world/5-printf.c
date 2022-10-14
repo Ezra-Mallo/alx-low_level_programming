@@ -4,7 +4,6 @@
  * @void: Takes no argument
  *
  * Description: This is the main entry. It calls the put function
- * puts - print a string test.
  * to print the text
  * Return: return 0 to show code has finished execution
  */

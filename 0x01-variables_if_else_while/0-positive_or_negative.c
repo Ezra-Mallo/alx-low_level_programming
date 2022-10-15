@@ -5,7 +5,13 @@
 /* more headers goes there */
 
 
-/* betty style doc for function main goes there */
+/**
+ * Main - The function is the entry point
+ * @void: is the arguement and it returns 0
+ *
+ * Description: Using betty style doc this is to test my control 
+ * structure knowledge
+ */
 int main(void)
 {
 	int n;

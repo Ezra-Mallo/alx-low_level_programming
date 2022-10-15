@@ -11,7 +11,7 @@
  *
  * Description: Using betty style doc this is to test my control
  * structure knowledge
- * return: returns 0
+ * Return: This returns a 0
  */
 int main(void)
 {

@@ -11,16 +11,13 @@
  */
 int main(void)
 {
-	for (int i = 'A'; i <= 'Z'; i++)
+	int ascii_char = 97;
+	int i = 0;
+
+	while (i <= 26)
 	{
-		putchar(tolower(i));
-		/**
-		 * char alphabets;
-		 * alphabets = tolower(i);
-		 *putchar("%d, ", alphabets);
-		 */
+		putchar (ascii_char + i);
+		i++;
 	}
 	return (0);
 }
-
-

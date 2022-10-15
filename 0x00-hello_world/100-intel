@@ -1,2 +1,2 @@
-#! /btivein/bash
-gcc -S -march=native $CFILE
+#! /bin/bash
+gcc -c $CFILE

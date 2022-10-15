@@ -12,7 +12,6 @@ int write(int filedes, const void *buf, unsigned int nbyte);
  */
 int main(void)
 {
-	write(1, "and that piece of art is useful\"", 33);
-	write(1, " - Dora Korpar, 2015-10-19\n", 26);
+	write(1, "and that piece of art is useful - Dora Korpar, 2015-10-19\n", 59);
 	return (1);
 }

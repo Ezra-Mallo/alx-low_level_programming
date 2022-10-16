@@ -17,9 +17,7 @@ int main(void)
 
 	while (i < 26)
 	{
-		if (ascii_char != 101 && ascii_char != 113)
-			putchar(ascii_char);
-
+		putchar(ascii_char);
 		ascii_char = ascii_char - 1;
 		i++;
 	}

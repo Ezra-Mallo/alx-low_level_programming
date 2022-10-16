@@ -8,7 +8,7 @@
  *
  * Desciption: This program prints the alphabets in alphabetical order
  * Return: returns zero
- * ascii_char were used t decode the lowecases
+ * ascii_char were used to decode the lowecases
  */
 int main(void)
 {
@@ -17,11 +17,12 @@ int main(void)
 
 	while (i < 26)
 	{
-		A += putchar (ascii_char + i);
+		if (ascii_char != 101 && ascii_char != 113)
+			putchar(ascii_char);
+
+		ascii_char = ascii_char + 1;
 		i++;
 	}
 
-	putchar ('\n');
-
+	putchar('\n');
 	return (0);
-}

@@ -21,7 +21,7 @@ int main(void)
 			putchar(ascii_char);
 
 		ascii_char = ascii_char - 1;
-		i--;
+		i++;
 	}
 
 	putchar('\n');

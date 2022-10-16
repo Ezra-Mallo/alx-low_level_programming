@@ -15,7 +15,7 @@ int main(void)
 
 	while (i < 17)
 	{
-		putchar("%o",i);
+		putchar('0'+ i );
 		i++;
 	}
 

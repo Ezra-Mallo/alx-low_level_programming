@@ -28,8 +28,7 @@ int main(void)
 			putchar((i / 10) + '0');
 			putchar((i % 10) + '0');
 			if (i != 89)
-				putchar(44);
-			putchar(32);
+				putchar(44), putchar(32);
 		}
 
 		i++;

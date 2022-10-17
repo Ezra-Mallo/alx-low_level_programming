@@ -12,31 +12,18 @@
 int main(void)
 {
 	int i;
-	int ch;
 
-	while (i < 17)
+	while (i < 10)
 	{
-		if (i == 10)
-			ch = 'a';
-		else if (i == 11)
-			ch = 'b';
-		else if (i == 12)
-			ch = 'c';
-		else if (i == 13)
-			ch = 'd';
-		else if (i == 14)
-			ch = 'e';
-		else if (i == 15)
-			ch = 'f';
-		else if (i == 16)
-			ch = '\010';
+		putchar(i + '0');
+		if (i != 9)
+		{	putchar(44);
+			putchar(32);
+		}
 		else
-			putchar(i + '0');
+			putchar(36);
 
-		putchar(ch);
 		i++;
 	}
-
-	putchar('\n');
 	return (0);
 }

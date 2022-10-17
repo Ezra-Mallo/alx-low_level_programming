@@ -24,8 +24,7 @@ int main(void)
 			putchar(j + '0');
 			putchar((i % 10) + '0');
 			if (j != 8)
-				putchar(44);
-			putchar(32);
+				putchar(44), putchar(32);
 			i++;
 		}
 	}

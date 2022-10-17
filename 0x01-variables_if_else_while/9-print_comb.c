@@ -19,10 +19,12 @@ int main(void)
 		if (i != 9)
 			putchar(44);
 
-		putchar(32);
+		else
+			putchar(36);
+
 		i++;
 	}
-	
+
 	putchar('\n');
 	return (0);
 }

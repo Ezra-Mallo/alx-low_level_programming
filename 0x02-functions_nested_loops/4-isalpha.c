@@ -7,18 +7,14 @@
  *
  * Return: return 0 or 1
  */
-int _islower(int c)
+int _isalpha(int c)
 {
 	int result;
 
-	if (c >= 65 && c <= 90)
-	{
+	if (c >= 65 && c <= 90 && c <= 97 && c <= 122)
 		result = 0;
-	}
-	else if (c >= 97 && c <= 122)
-	{
+	else
 		result = 1;
-	}
-
+	
 	return (result);
 }

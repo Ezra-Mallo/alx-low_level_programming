@@ -10,7 +10,9 @@
 int main(void)
 {
 	long int my_int[100];
-	long int sum, i;
+	long int sum, i, num;
+
+	sum = 0;
 
 	for (i = 0; i <= 60; i++)
 	{
@@ -25,12 +27,11 @@ int main(void)
 	}
 	for (i = 0; i <= 60;  i++)
 	{
-		if (my_int[i] < 4000000)
-		{
-			if (my_int[i] % 2 == 0)
-				sum = sum + my_int[i];
-		}
-		else
+		num = my_int[i];
+		if (num % 2 == 0 && num < 4000000)
+			sum = sum + num;
+
+		if (num > 4000000)
 			break;
 	}
 

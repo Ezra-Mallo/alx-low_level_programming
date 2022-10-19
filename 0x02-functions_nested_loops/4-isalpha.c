@@ -2,7 +2,7 @@
 
 
 /**
- * islower - this is a function that returns 1 or 0 if the it receives xter
+ * _isalpha - this is a function that returns 1 or 0 if the it receives xter
  * @c: is the parameter
  *
  * Return: return 0 or 1

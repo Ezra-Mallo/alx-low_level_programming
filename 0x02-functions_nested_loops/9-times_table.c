@@ -44,10 +44,10 @@ void times_table(void)
 			if (j < 9)
 				_putchar(','), _putchar(' ');
 
-			if (result <= 9)
+/**			if (result < 10)
 				_putchar(' ');
 
-  
+  */
 		}
 		_putchar('\n');
 	}

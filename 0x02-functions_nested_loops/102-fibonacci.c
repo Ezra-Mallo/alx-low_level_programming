@@ -9,10 +9,10 @@
  */
 int main(void)
 {
-	long int my_int[50];
+	long int my_int[60];
 	long int i;
 
-	for (i = 1; i <= 51; i++)
+	for (i = 0; i <= 51; i++)
 	{
 		if (i == 0)
 			my_int[0] = 0;
@@ -23,8 +23,9 @@ int main(void)
 		if (i >= 2)
 			my_int[i] =  my_int[i - 1] + my_int[i - 2];
 	}
-	for (i = 2; i <= 51;  i++)
-		printf("%lu, ", my_int[i]);
+	for (i = 0; i <= 51;  i++)
+		if (i > 1)
+			printf("%lu, ", my_int[i]);
 
 	printf("\n");
 	return (0);

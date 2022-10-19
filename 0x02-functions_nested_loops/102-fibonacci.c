@@ -11,7 +11,7 @@ void fibonacci(int n)
 	long int my_int[1000];
 	long int i;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i <= n; i++)
 	{
 		if (i == 0)
 			my_int[0] = 0;
@@ -22,7 +22,7 @@ void fibonacci(int n)
 		if (i >= 2)
 			my_int[i] =  my_int[i - 1] + my_int[i - 2];
 	}
-	for (i = 0; i < n;  i++)
+	for (i = 1; i <= n;  i++)
 		printf("%lu, ", my_int[i]);
 
 	printf("\n");

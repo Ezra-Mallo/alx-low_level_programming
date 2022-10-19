@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * fabinachi - computes and prints the fibonacci numbers
+ * fibonacci - computes and prints the fibonacci numbers
  * @n:  parameter number
  *
  * This prints all the finobachi number
@@ -8,8 +8,8 @@
  */
 void fibonacci(int n)
 {
-	int my_int[sizeof(int)];
-	int i;
+	long int my_int[1000];
+	long int i;
 
 	for (i = 0; i < n; i++)
 	{
@@ -23,7 +23,7 @@ void fibonacci(int n)
 			my_int[i] =  my_int[i - 1] + my_int[i - 2];
 	}
 	for (i = 0; i < n;  i++)
-		printf("%d, ", my_int[i]);
+		printf("%lu, ", my_int[i]);
 
 	printf("\n");
 }

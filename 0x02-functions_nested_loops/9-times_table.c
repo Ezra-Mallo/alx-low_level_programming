@@ -33,7 +33,7 @@ void times_table(void)
 			else if (result <= 89)
 				c = 8;
 
-			if (result < 10)
+			if (result <10)
 				_putchar(' ');
 			else if (result >= 10)
 				_putchar(c + '0');

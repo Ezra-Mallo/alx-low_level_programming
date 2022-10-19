@@ -15,7 +15,7 @@ void times_table(void)
 		{
 			result = i * j;
 			if (result <= 9)
-				c = ' ';
+				result = result;
 			else if (result <= 19)
 				c = 1;
 			else if (result <= 29)

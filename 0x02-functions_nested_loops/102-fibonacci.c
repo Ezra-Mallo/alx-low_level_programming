@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 /**
  * fibonacci - computes and prints the fibonacci numbers

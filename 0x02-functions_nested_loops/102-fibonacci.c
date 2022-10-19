@@ -24,9 +24,13 @@ int main(void)
 			my_int[i] =  my_int[i - 1] + my_int[i - 2];
 	}
 	for (i = 0; i <= 51;  i++)
+	{
 		if (i > 1)
-			printf("%lu, ", my_int[i]);
+			printf("%lu", my_int[i]);
 
+		if (i < 51)
+			printf(", ");
+	}
 	printf("\n");
 	return (0);
 }

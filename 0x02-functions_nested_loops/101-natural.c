@@ -1,26 +1,24 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * my_multiples - function to compute the sum of multiple of n
- * @n: first parameter
+ * main - function to compute the sum of multiple of n
+ * @void: first parameter
  *
  * Description: computes the multople od 3 and 5
- * Return: the result of the summing of themultiple is returned
+ * Return: returns 0
  */
-int my_multiples(int n)
+int main(void)
 {
 	int result;
 	int i;
 
 	result = 0;
 
-	for (i = 1; i < n; i++)
+	for (i = 1; i < 1024; i++)
 	{
 		if (i % 3 == 0 || i % 5 == 0)
-		{
 			result = result + i;
-		}
 	}
-
-	return (result);
+	printf("%d \n", result);
+	return (0);
 }

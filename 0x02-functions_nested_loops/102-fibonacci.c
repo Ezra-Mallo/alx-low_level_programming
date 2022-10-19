@@ -28,7 +28,7 @@ int main(void)
 		if (i > 1)
 			printf("%lu", my_int[i]);
 
-		if (i < 51)
+		if (i > 1 && i < 51)
 			printf(", ");
 	}
 	printf("\n");

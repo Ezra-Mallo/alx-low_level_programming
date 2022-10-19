@@ -1,18 +1,18 @@
-#include "main.h"
 #include <stdio.h>
+
 /**
- * fibonacci - computes and prints the fibonacci numbers
- * @n:  parameter number
+ * main - computes and prints the fibonacci numbers
+ * @void:  parameter number
  *
  * This prints all the finobachi number
  * Return: nothing
  */
-void fibonacci(int n)
+int main(void)
 {
-	long int my_int[1000];
+	long int my_int[50];
 	long int i;
 
-	for (i = 0; i <= n; i++)
+	for (i = 0; i <= 50; i++)
 	{
 		if (i == 0)
 			my_int[0] = 0;
@@ -23,8 +23,9 @@ void fibonacci(int n)
 		if (i >= 2)
 			my_int[i] =  my_int[i - 1] + my_int[i - 2];
 	}
-	for (i = 1; i <= n;  i++)
+	for (i = 1; i <= 50;  i++)
 		printf("%lu, ", my_int[i]);
 
 	printf("\n");
+	return (0);
 }

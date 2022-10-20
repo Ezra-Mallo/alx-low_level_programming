@@ -12,12 +12,14 @@ int main(void)
 	c = 'A';
 	_putchar(c);
 	_putchar(':');
+	_putchar(' ');
 	_putchar(_isupper(c) + '0');
 	_putchar('\n');
 
 	c = 'a';
 	_putchar(c);
 	_putchar(':');
+	_putchar(' ');
 	_putchar(_isupper(c) + '0');
 	_putchar('\n');
 

@@ -1,1 +1,1 @@
-This readme is for the debugging task.
+This readme is for project 0x03. C - Debugging

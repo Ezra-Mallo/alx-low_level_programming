@@ -12,22 +12,16 @@
  */
 void positive_or_negative(int n)
 {
-	int result;
-
 	if (n > 0)
 	{
-		putchar('+');
-		result = 1;
+		printf("%d is positive\n", n);
 	}
 	else if (n == 0)
 	{
-		putchar('0');
-		result = 0;
+		printf("%d is a zero\n", n);
 	}
 	else if (n < 0)
 	{
-		putchar('-');
-		result = -1;
+		printf("%d is negative\n", n);
 	}
-	printf("%d", result);
 }

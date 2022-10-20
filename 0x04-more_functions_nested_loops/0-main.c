@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -7,21 +8,28 @@
  */
 int main(void)
 {
+	char d[10];
 	char c;
+	int i;
 
 	c = 'A';
-	_putchar(c);
-	_putchar(':');
-	_putchar(' ');
-	_putchar(_isupper(c) + '0');
-	_putchar('\n');
+
+	d[0] = c;
+	d[1] = ':';
+	d[2] = ' ';
+	d[3] = _isupper(c) + '0';
+	d[4] = '\n';
 
 	c = 'a';
-	_putchar(c);
-	_putchar(':');
-	_putchar(' ');
-	_putchar(_isupper(c) + '0');
-	_putchar('\n');
+
+	d[5] = c;
+	d[6] = ':';
+	d[7] = ' ';
+	d[8] = _isupper(c) + '0';
+	d[9] = '\n';
+
+	for (i = 0; i < 10; i++)
+		_putchar((d[i]));
 
 	return (0);
 }

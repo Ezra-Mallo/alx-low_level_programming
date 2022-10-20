@@ -25,10 +25,10 @@ int main(void)
 	d[6] = ':';
 	d[7] = ' ';
 	d[8] = _isupper(c) + '0';
-	d[9] = '\n';
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 9; i++)
 		_putchar((d[i]));
 
+	_putchar('\n');
 	return (0);
 }

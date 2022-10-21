@@ -7,7 +7,13 @@
  */
 int main(void)
 {
-	more_numbers();
+	int i;
+
+	for (i = 0;  i < 10; i++)
+	{
+		more_numbers();
+		_putchar('\n');
+	}
 
 	return (0);
 }

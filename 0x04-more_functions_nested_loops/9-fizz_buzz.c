@@ -13,19 +13,46 @@
 int main(void)
 {
 	int i;
+	int j;
+	int k;
+	int data[10];
+	
 
 	for (i = 1; i <= 100;  i++)
 	{
 		if (i % 5 == 0 && i % 3 == 0)
-			printf("FizzBuzz");
+		{
+			data[0] = "FizzBuzz";
+			j = 8;
+		}
 		else if (i % 3 == 0)
-			printf("Fizz");
+		{
+			data[0] = "Fizz";
+			j = 4;
+		}
 		else if (i % 5 == 0)
-			printf("Buzz");
+		{	
+			data[0] = "Buzz";
+			j = 4;
+		}
 		else
-			printf("%d", i);
+		{	
+			data[0] = i;
+			j = 3 ;
+		}
+		
 		if (i< 100)
+		{
+			for (k = 0; k < j; k++)
+				printf("%d", data[k]);
 			printf(" ");
+
+		}
+		else
+		{
+			for (k = 0; k< j; k++
+					printf("%d", data[k]);
+		}
 	}
 	printf("\n");
 

@@ -7,13 +7,9 @@
  */
 int main(void)
 {
-	int i;
 
-	for (i = 0;  i <= 9; i++)
-	{
-		more_numbers();
-		_putchar('\n');
-	}
+	more_numbers();
+	_putchar('\n');
 
 	return (0);
 }

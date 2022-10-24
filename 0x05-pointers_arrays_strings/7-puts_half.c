@@ -18,10 +18,10 @@ void puts_half(char *str)
 		null_char = *(str + count);
 		count = count + 1;
 	}
-	count -= 1;
-	count2 = count / 2;
+	count -= 2;
+	count2 = count / 2  + 1;
 
-	for (i = count2; i < count; i++)
+	for (i = count2; i <= count; i++)
 		_putchar(*(str + i));
 	_putchar('\n');
 }

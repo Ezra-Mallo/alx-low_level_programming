@@ -3,7 +3,6 @@
 /**
  * _puts - a function that returns the length of a string
  * @str: first parameer. a char data type
- * Return: return an integer value
  */
 void _puts(char *str)
 {

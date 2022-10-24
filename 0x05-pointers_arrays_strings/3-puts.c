@@ -19,8 +19,9 @@ void _puts(char *str)
 		null_char = *(str + count);
 		count = count + 1;
 	}
+	count -= 1;
 
-	for (i = 0; i < count-1; i++)
+	for (i = 0; i < count; i++)
 		_putchar(*(str + i));
 	_putchar('\n');
 

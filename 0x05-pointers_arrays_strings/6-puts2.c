@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * _puts - a function that prints a string, followed by a new line, to stdout
+ * puts2 -  a function that prints every other character of a string,
+ *          starting with the first character, followed by a new line.
  * @str: first parameer. a char data type
  */
-void _puts(char *str)
+void puts2(char *str)
 {
 	int count;
 	char null_char;
@@ -20,7 +21,7 @@ void _puts(char *str)
 	}
 	count -= 1;
 
-	for (i = 0; i < count; i++)
+	for (i = 0; i < count; i += 2)
 		_putchar(*(str + i));
 	_putchar('\n');
 

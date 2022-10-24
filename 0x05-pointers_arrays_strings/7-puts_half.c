@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _puts - a function that prints a string, followed by a new line, to stdout
+ * puts_half - a function that prints half of a string, followed by a new line
  * @str: first parameer. a char data type
  */
-void _puts(char *str)
+void puts_half(char *str)
 {
-	int count;
+	int count, count2;
 	char null_char;
 	int i;
 
@@ -19,9 +19,9 @@ void _puts(char *str)
 		count = count + 1;
 	}
 	count -= 1;
+	count2 = count / 2;
 
-	for (i = 0; i < count; i++)
+	for (i = count2; i < count; i++)
 		_putchar(*(str + i));
 	_putchar('\n');
-
 }

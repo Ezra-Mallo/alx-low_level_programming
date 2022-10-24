@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * print_rev - a function that returns the length of a string
+ * print_rev -  a function that prints a string, in reverse,
+ *              followed by a new line.
  * @s: first parameer. a char data type
  */
 void print_rev(char *s)

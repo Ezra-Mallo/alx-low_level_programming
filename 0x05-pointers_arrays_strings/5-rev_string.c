@@ -18,9 +18,9 @@ void rev_string(char *s)
 		null_char = *(s + count);
 		count = count + 1;
 	}
-	count = count - 1;
+	count = count - 2;
 
-	for (i = count; i >= 0; i--)
+	for (i = count; i >= 1; i--)
 	{
 		_putchar(*(s + i));
 	}

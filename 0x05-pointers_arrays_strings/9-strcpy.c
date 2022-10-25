@@ -1,7 +1,11 @@
+#include <string.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
- * *_strcpy - kasjkajksjaasjkajkjksa
+ * *_strcpy - Write a function that copies the string pointed
+ *	to by src, including the terminating null byte (\0),
+ *	to the buffer pointed to by dest.
  * @dest: First parameter is the pointer for the destination
  * @src: Second parameter is the pointer to the source
  *
@@ -9,9 +13,17 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	char * c;
+	int k = 0;
+	int i;
+	char nul = ' ';
 
-	c = *src;
+	while (nul != '\0')
+	{
+		nul = *(src + k);
+		k++;
+	}
+	for (i = 0; i < k ; i++)
+		dest[i] = src[i];
 
-	return (c);
+	return (dest);
 }

@@ -9,12 +9,14 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	/*int i, j, k, l;
-	
-	i = _strlen(dest);
-	j = _strlen(src) + 1;*/
-	strcat(dest, src);
-	/*l = 0;
+	/*int i, j, k, li;*/
+
+	/*i = _strlen(dest);*/
+	/*j = _strlen(src) + 1;*/
+
+	strcat(*dest, *src);
+	/**
+	 * l = 0;
 	for (k = i; k <= (i + j); k++)
 	{
 		if ((*(src + l)) != '\0')
@@ -25,6 +27,7 @@ char *_strcat(char *dest, char *src)
 			dest[k] = '\0';
 
 		l++;
-	}*/
+	}
+	 */
 	return (dest);
 }

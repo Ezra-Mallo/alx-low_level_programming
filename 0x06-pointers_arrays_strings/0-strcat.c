@@ -1,5 +1,5 @@
 #include "main.h"
-/* #include <stdio.h>    just for a check*/
+#include <stdio.h>   /* just for a check*/
 
 /**
  * *_strcat - a function that concatenates two strings.
@@ -13,15 +13,17 @@ char *_strcat(char *dest, char *src)
 
 	i = _strlen(dest);
 	j = _strlen(src);
-	/*printf("%d\n", j);   just for a check*/
+
+/*	printf("%d, %d\n", i, j);   just for a check*/
 
 	l = 0;
-	for (k = i; k <= (i + j); k++)
+	for (k = i; k <= (i + j + 1); k++)
 	{
 		if ((*(src + l)) != '\0')
 			dest[k] = *(src + l);
 		else
 		{
+			dest[k] = '\n';
 			dest[k] = '\0';
 			break;
 		}

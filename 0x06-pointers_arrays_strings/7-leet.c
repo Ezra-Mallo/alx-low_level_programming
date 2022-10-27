@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * leet - Write a function that encodes a string into 1337
  *	Letters a & A replaced by 4, Letters e & E replaced by 3
@@ -22,14 +22,19 @@ char *leet(char *a)
 		nul = a[k];
 		if (nul == 65 || nul == 97)
 			a[k] = '4' + 0;
+
 		else if (nul == 69 || nul == 101)
 			a[k] = '3' + 0;
+		
 		else if (nul == 79 || nul == 111)
 			a[k] = '0' + 0;
+		
 		else if (nul == 84 || nul == 116)
 			a[k] = '7' + 0;
+		
 		else if (nul == 76 || nul == 108)
 			a[k] = '1' + 0;
+		
 		k++;
 	}
 	return (a);

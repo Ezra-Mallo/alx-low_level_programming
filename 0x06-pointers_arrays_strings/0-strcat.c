@@ -13,12 +13,15 @@ char *_strcat(char *dest, char *src)
 	i = _strlen(dest);
 	j = _strlen(src) + 1;
 	l = 0;
-	for (k = i; k < (i + j); k++)
+	for (k = i; k <= (i + j); k++)
 	{
 		if ((*(src + l)) != '\0')
 			dest[k] = *(src + l);
 		else
+		{
+			desk[k] = '\0';
 			break;
+		}
 		l++;
 	}
 	return (dest);

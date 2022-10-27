@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strcat - a function that concatenates two strings.
+ * _strcat - a function that concatenates two strings.
  * @dest: First parameter is the destination pointer
  * @src: Second parameter is the source pointer
  * Return: returns & assigns the value of destination pointer to the call
@@ -13,7 +13,6 @@ char *_strcat(char *dest, char *src)
 	i = _strlen(dest);
 	j = _strlen(src) + 1;
 	l = 0;
-
 	for (k = i; k < (i + j); k++)
 	{
 		if ((*(src + l)) != '\0')
@@ -22,6 +21,5 @@ char *_strcat(char *dest, char *src)
 			break;
 		l++;
 	}
-
 	return (dest);
 }

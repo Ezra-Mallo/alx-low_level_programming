@@ -11,7 +11,7 @@ char *_strcat(char *dest, char *src)
 	int i, j, k, l;
 	
 	i = _strlen(dest);
-	j = _strlen(src);
+	j = _strlen(src) + 1;
 	
 	l = 0;
 	for (k = i; k <= (i + j); k++)

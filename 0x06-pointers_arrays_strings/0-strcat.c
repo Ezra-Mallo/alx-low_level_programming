@@ -12,6 +12,7 @@ char *_strcat(char *dest, char *src)
 
 	i = _strlen(dest);
 	j = _strlen(src) + 1;
+
 	l = 0;
 	for (k = i; k <= (i + j); k++)
 	{

@@ -19,7 +19,7 @@ char *cap_string(char *a)
 		nul1 = a[k];
 		if (nul1 == ' ' || nul1 == '\t' || nul1 == '\n' || nul1 == ',' ||
 				nul1 == ';' || nul1 == '.' || nul1 == '!' ||
-				nul1 == '?' || nul1 == '\"' || nul1 == '(' ||
+				nul1 == '?' || nul1 == '"' || nul1 == '(' ||
 				nul1 == ')' || nul1 == '{' || nul1 == '}')
 		{
 			nul2 = a[k + 1];
@@ -28,8 +28,7 @@ char *cap_string(char *a)
 				nul2 = nul2 - 32;
 				a[k + 1] = nul2;
 			}
-		}
-
+		}`
 		k++;
 	}
 	return (a);

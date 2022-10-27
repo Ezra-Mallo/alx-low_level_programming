@@ -8,7 +8,7 @@
  *	to the buffer pointed to by dest.
  * @dest: First parameter is the pointer for the destination
  * @src: Second parameter is the pointer to the source
- * @n: Third parameter is an int 
+ * @n: Third parameter is an int
  *
  * Return: Character pointer
  */

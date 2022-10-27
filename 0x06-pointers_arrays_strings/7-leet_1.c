@@ -22,26 +22,26 @@ char *leet(char *a)
 		nul = a[k];
 		switch (nul)
 		{
-	 		case 65:
-			case 97:
-				a[k] = '4' + 0;
-				break;
-			case 69:
-			case 101:
-				a[k] = '3' + 0;
-				break;
-			case 79:
-			case 111:
-				a[k] = '0' + 0;
-				break;
-			case 84:
-			case 116:
-				a[k] = '7' + 0;
-				break;
-			case 76:
-			case 108:
-				a[k] = '1' + 0;
-				break;
+		case 65:
+		case 97:
+			a[k] = '4' + 0;
+			break;
+		case 69:
+		case 101:
+			a[k] = '3' + 0;
+			break;
+		case 79:
+		case 111:
+			a[k] = '0' + 0;
+			break;
+		case 84:
+		case 116:
+			a[k] = '7' + 0;
+			break;
+		case 76:
+		case 108:
+			a[k] = '1' + 0;
+			break;
 		}
 		k++;
 	}

@@ -20,16 +20,29 @@ char *leet(char *a)
 	while (nul != '\0')
 	{
 		nul = a[k];
-		if (nul == 65 || nul == 97)
-			a[k] = '4' + 0;
-		else if (nul == 69 || nul == 101)
-			a[k] = '3' + 0;
-		else if (nul == 79 || nul == 111)
-			a[k] = '0' + 0;
-		else if (nul == 84 || nul == 116)
-			a[k] = '7' + 0;
-		else if (nul == 76 || nul == 108)
-			a[k] = '1' + 0;
+		switch (nul)
+		{
+	 		case 65:
+			case 97:
+				a[k] = '4' + 0;
+				break;
+			case 69:
+			case 101:
+				a[k] = '3' + 0;
+				break;
+			case 79:
+			case 111:
+				a[k] = '0' + 0;
+				break;
+			case 84:
+			case 116:
+				a[k] = '7' + 0;
+				break;
+			case 76:
+			case 108:
+				a[k] = '1' + 0;
+				break;
+		}
 		k++;
 	}
 	return (a);

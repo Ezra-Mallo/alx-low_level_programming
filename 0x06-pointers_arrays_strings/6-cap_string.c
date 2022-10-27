@@ -17,7 +17,10 @@ char *cap_string(char *a)
 	while (nul1 != '\0')
 	{
 		nul1 = a[k];
-		if (nul1 == 9 || nul1 == 10 || nul1 == 32)
+		if (nul1 == 9 || nul1 == 10 || nul1 == 32 || nul1 == 44 ||
+				nul1 == 59 || nul1 == 33 ||  nul1 == 63 ||
+				nul1 == 123 || nul1 == 125 || nul1 == 34 ||
+				nul1 == 40 || nul1 == 41 || nul1 == 46)
 		{
 			nul2 = a[k + 1];
 			if (nul2 >= 97 && nul2 <= 122)

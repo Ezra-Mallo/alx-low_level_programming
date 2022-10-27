@@ -11,19 +11,31 @@
  */
 char *leet(char *a)
 {
-	int i, j;
-	char data1[] = "aAeEoOtTlL";
-	char data2[] = "4433007711";
+	int k;
+	int nul;
 
-	for (i = 0; a[i] != '\0'; i++)
+	nul = ' ';
+	k = 0;
+
+	while (nul != '\0')
 	{
-		for (j = 0; j < 10; j++)
-		{
-			if (a[i] == data1[j])
-			{
-				a[i] = data2[j];
-			}
-		}
+		nul = a[k];
+		if (nul == 65 || nul == 97)
+			a[k] = '4' + 0;
+
+		else if (nul == 69 || nul == 101)
+			a[k] = '3' + 0;
+		
+		else if (nul == 79 || nul == 111)
+			a[k] = '0' + 0;
+		
+		else if (nul == 84 || nul == 116)
+			a[k] = '7' + 0;
+		
+		else if (nul == 76 || nul == 108)
+			a[k] = '1' + 0;
+		
+		k++;
 	}
 	return (a);
 }

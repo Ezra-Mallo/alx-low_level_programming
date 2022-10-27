@@ -16,7 +16,11 @@ char *_strcat(char *dest, char *src)
 
 	for (k = i; k < (i + j); k++)
 	{
-		dest[k] = *(src + l);
+		if ((*(src + l)) != '\0')
+			dest[k] = *(src + l);
+		else
+			break;
+
 		l++;
 	}
 

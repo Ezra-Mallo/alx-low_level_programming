@@ -1,50 +1,25 @@
 #include "main.h"
 
 /**
- * _put_many_chars -  toprint many charaters
+ * print_number -  to print numbers
  * @c: The digit tp print
- * Return: noting
+ * Return: nothing
  */
-void _put_many_chars(int c)
+void print_number(int c)
 {
-	int condi = 1;
-	int i = 1;
-	int k;
-	int num;
-	int check1, check2;
-	char n[50];
+	unsigned int tmp;
+
+	tmp = c;
 
 	if (c < 0)
 	{
 		_putchar('-');
-		c *= -1;
+		tmp = -c;
 	}
 
-	num = c;
-	while (condi == 1)
+	if (tmp / 10 != 0)
 	{
-		check1 = num % 10;
-		check2 = num / 10;
-		if (check2 > 0)
-		{
-			condi = 1;
-			n[i] = check1;
-			num = check2;
-			i++;
-		}
-		else if (check2 == 0)
-		{
-			condi = 0;
-			n[i] = check1;
-			break;
-		}
+		print_number(tmp / 10);
 	}
-
-	k = i;
-	while (k > 0)
-	{
-		_putchar(n[k] + '0');
-		k--;
-	}
-	_putchar('\n');
+	_putchar((tmp % 10) + '0');
 }

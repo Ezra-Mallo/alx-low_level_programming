@@ -10,19 +10,14 @@
  */
 void reverse_array(int *a, int n)
 {
-	int *num, tmp1, tmp2;
-	int i, count = n - 1;
+	int i;
+	int t;
 
-	num1 = a;
-	for (i = 0; i < (n - i); i++)
+	for (i = 0; i < n--; i++)
 	{
-		tmp1 = num[i];
-		tmp2 = a[count];
-		a[count] = tmp1;
-		num[i] = tmp2;
-		count = count - 1;
+		t = a[i];
+		a[i] = a[n];
+		a[n] = t;
+		printf("%d\t%d\t%d\t%d\n", i, n, a[i], a[n]);
 	}
-
-	/*for (k = 0; k <= (n -1); k++)*/
-		/*printf("%d\t%d\t%d\t%d\n", k, a[k], num[k]);*/
 }

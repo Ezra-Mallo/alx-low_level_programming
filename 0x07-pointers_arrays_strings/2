@@ -1,0 +1,49 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ * *_strchr - a function that locates a character in a string
+ * @s: First parameter
+ * @c: Second parameter
+ * Return: pointer
+ *
+ */
+char *_strchr(char *s, char c)
+{
+	int i, j, k, l;
+	int check = 0;
+	char char_cmp = ' ';
+	char cc = c;
+	char tmp;
+	char *tmp2;
+
+	i = 0;
+	j = 0;
+
+	while (s[i])
+		i++;
+	while (s[j])
+	{
+		char_cmp = *(s + j);
+		if (char_cmp == cc)
+		{
+			check = 1;
+			break;
+		}
+		j++;
+	}
+
+	if (check == 1)
+	{
+		printf("%d, %d, %d\n ", j, i, check);
+		l = i - j;
+		for (k = 0; k < l; k++)
+		{
+			tmp = s[k + j];
+			printf("%d, %d, %c\n ", k, (k + j), tmp);
+			*(tmp2 + k) = tmp;
+		}
+
+	}
+
+	return (s);
+}

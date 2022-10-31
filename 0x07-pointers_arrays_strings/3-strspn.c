@@ -32,5 +32,6 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		i++;
 	}
-	return (j - k);
+	i = j - k;
+		return (i);
 }

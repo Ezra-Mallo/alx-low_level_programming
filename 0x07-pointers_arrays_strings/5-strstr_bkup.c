@@ -1,4 +1,4 @@
-#include "main.h"
+include "main.h"
 
 /**
  * *_strspn - a function that gets the length of a prefix substring
@@ -7,14 +7,14 @@
  * Return: int
  *
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
-	int i, j, k, l;
+	int i, j, k;
 	char char_cmp1;
-	char char_cmp2;
+	char char_cmp2;
 	char *a;
 
-	a = accept;
+	a = needle;
 	i = 0;
 	j = 0;
 	k = 0;
@@ -23,15 +23,14 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		char_cmp1 = *(a + i);
 		j = 0;
-		while (s[j])
+		while (haystack[j])
 		{
-			char_cmp2 = *(s + j);
+			char_cmp2 = *(haystack + j);
 			if (char_cmp1 == char_cmp2)
-				k++;
+				k=j, break;
 			j++;
 		}
 		i++;
 	}
-	l = j - k;
-		return (l);
+	return (j - k);
 }

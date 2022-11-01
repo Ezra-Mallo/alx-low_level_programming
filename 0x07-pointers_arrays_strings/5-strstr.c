@@ -1,36 +1,39 @@
 #include "main.h"
 
 /**
- * *_strspn - a function that gets the length of a prefix substring
- * @s: First parameter
- * @accept: Second parameter
- * Return: int
- *
+ * *_strstr - a function that locates a substring
+ * @haystack: First parameter
+ * @needle: Second parameter
+ * Return: pointer
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, k;
-	char char_cmp1;
-	char char_cmp2;
-	char *a;
+	int i = 0, j = 0;
+	int index;
+	int flag = 0, chk = 0;
 
-	a = needle;
-	i = 0;
-	j = 0;
-	k = 0;
-
-	while (a[i])
+	while (needle[i] != '\0')
 	{
-		char_cmp1 = *(a + i);
-		j = 0;
-		while (haystack[j])
+		while (haystack[j] != '\0')
 		{
-			char_cmp2 = *(haystack + j);
-			if (char_cmp1 == char_cmp2)
-				k=j, break;
+			if (needle[i] == haystack[j] && flag == 0)
+			{
+				if (chk < 1 && flag != 1)
+					index = j;
+				chk++;
+				flag = 1;
+				break;
+			}
+			else
+				flag = 0;
 			j++;
 		}
 		i++;
 	}
-	return (j - k);
+	if (chk == i && flag == 1)
+	{
+		return (&haystack[index]);
+	}
+	else
+		return (0);
 }

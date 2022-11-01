@@ -1,41 +1,33 @@
 #include "main.h"
 
 /**
- * *_strichr - a function that gets the length of a prefix substring
+ * *_strchr - a function that gets the length of a prefix substring
  * @s: First parameter
- * @accept: Second parameter
+ * @c: Second parameter
  * Return: int
  *
  */
 char *_strchr(char *s, char c)
 {
-	int i, j, k;
+	int i = 0;
 	char char_cmp;
 	char *ptr;
+	int chk = 0;
 
-	*ptr = s[0];
-
-	i = 0;
-	k = 0;
 
 	while (s[i])
 	{
 		char_cmp = *(s + i);
 		if (char_cmp == c)
 		{
-			k = i;
+			ptr = &s[i];
+			chk = 1;
 			break;
 		}
-		
 		i++;
 	}
-	j = 0;
-	while (s[k])
-	{
-		*(ptr+j) = *(s + k);
-		k++;
-		j++;
-	}
-
-	return (ptr);
+	if (chk == 1)
+		return (ptr);
+	else
+		return (0);
 }

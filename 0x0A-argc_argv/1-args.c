@@ -8,7 +8,10 @@
  */
 int main(int argc, char *argv[])
 {
-	printf("%d", argc);
+	int count;
+
+	count = argc - 1;
+	printf("%d", count);
 	printf("\n");
 	argv[0] = " ";
 

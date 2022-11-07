@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * _strdup -  Write a function that returns a pointer to a newly allocated
@@ -10,16 +11,22 @@
  */
 char *_strdup(char *str)
 {
-	int i;
-	char *a = malloc(sizeof(str));
-	char b = sizeof(str);
+	int i = 0;
+	char *a = malloc(sizeof(*str));
+	char *ptr;
+
 
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 0; i < b; i++)
+	while (str[i] != '\0')
+	{
 		a[i] = str[i];
+		i++;
+	}
+
+	ptr = a;
 
 /*	free(str);*/
-	return (a);
+	return (ptr);
 }

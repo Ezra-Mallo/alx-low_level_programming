@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * create_array -  a function that creates an array of chars, and
@@ -13,27 +12,19 @@
 char *create_array(unsigned int size, char c)
 {
 	int i = 0;
-	char **new_message = (char **)malloc(sizeof(char*) * size);
-
-	char *a =malloc(size * sizeof(c));
+	char *a;
 	int b = size * sizeof(c);
-	char *ptr;
-
-	printf("module:\n%d\t %d\t [%d]\n", c, size, b);
-
 
 	if (size == 0)
 		return (NULL);
 
+	a = malloc(size * sizeof(c));
 
 	for (i = 0; i < b; i++)
 		a[i] = c;
 
-	for (i = 0; i < b; i++)
-		printf("0x%02x, ", a[i]);
-	printf("\n");
-	ptr = (char *)a;
-
-
-	return (ptr);
+	if (a == NULL)
+		return (NULL);
+	else
+		return (a);
 }

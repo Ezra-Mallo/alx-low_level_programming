@@ -15,14 +15,19 @@ char *_strdup(char *str)
 	char *ptr = (char *)malloc(strlen(str) * sizeof(*str));
 	int i = 0;
 
+	printf("XXX");
 	if (str == NULL)
+	{
+		printf("XXX");
 		return (NULL);
+	}
 
 	while (str[i] != '\0')
 	{
 		ptr[i] = str[i];
 		i++;
 	}
+	ptr[i] ='\0';
 
 	return (ptr);
 }

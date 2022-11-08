@@ -15,10 +15,8 @@ char *_strdup(char *str)
 	char *ptr = (char *)malloc(strlen(str) * sizeof(*str));
 	int i = 0;
 
-	printf("XXX");
 	if (str == NULL)
 	{
-		printf("XXX");
 		return (NULL);
 	}
 

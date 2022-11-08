@@ -39,8 +39,6 @@ int main(void)
 {
 	char *buffer;
 
-	printf("make the call now\n\n");
-
 	buffer = create_array(98, 'H');
 	if  (buffer == NULL)
 	{

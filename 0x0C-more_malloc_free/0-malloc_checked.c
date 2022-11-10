@@ -11,7 +11,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *ptr;
 
-	ptr = (void *)malloc(b);
+	ptr = (void *)malloc(b * sizeof(void));
 	if (ptr == NULL)
 		return ((void *)98);
 

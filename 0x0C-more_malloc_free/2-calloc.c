@@ -15,7 +15,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	ptr = (void *)calloc(size, nmemb);
 
 	if (ptr == NULL)
-		return ((void *)98);
+		return (NULL);
 
 	return (ptr);
 }

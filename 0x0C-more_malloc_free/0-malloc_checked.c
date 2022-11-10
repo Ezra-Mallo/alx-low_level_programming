@@ -1,10 +1,9 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * malloc_checked - a function that allocates memory using malloc
- * @b: size of the dynamic memoryi
+ * @b: size of the dynamic memory
  * Return: void value
  */
 void *malloc_checked(unsigned int b)
@@ -13,7 +12,8 @@ void *malloc_checked(unsigned int b)
 
 	ptr = (void *)malloc(b);
 	if (ptr == NULL)
-		return ((void *)98);
+		exit(98);
+		/*return ((void *)98);*/
 
 	return (ptr);
 }

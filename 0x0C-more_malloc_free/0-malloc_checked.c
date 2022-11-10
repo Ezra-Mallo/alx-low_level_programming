@@ -7,14 +7,14 @@
  * @b: size of the dynamic memory
  */
 void *malloc_checked(unsigned int b)
-{	
+{
 	void *ptr;
 
 	ptr = malloc(b * sizeof(unsigned int));
 	/*ptr = &b;*/
 
 	if (ptr == NULL)
-		return ((unsigned int*) 98);
+		return ((unsigned int *) 98);
 
 	return (ptr);
 }

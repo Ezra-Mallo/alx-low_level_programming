@@ -1,0 +1,18 @@
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ * malloc_checked - a function that allocates memory using malloc
+ * @b: size of the dynamic memory
+ */
+void *malloc_checked(unsigned int b)
+{
+	void *ptr;
+
+	if (b < 0)
+		return (NULL);
+
+	ptr = (void*) malloc(b * sizeof(int));
+	ptr = &b;
+	return (ptr);
+}

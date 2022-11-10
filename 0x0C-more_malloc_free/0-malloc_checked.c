@@ -17,5 +17,5 @@ void *malloc_checked(unsigned int b)
 	if (ptr == NULL)
 		return ((void *) 98);
 
-	return (ptr);
+	return ((void *)ptr);
 }

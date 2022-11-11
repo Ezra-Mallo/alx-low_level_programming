@@ -10,7 +10,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **ptr;
-	int row, col, i;
+	int row, col;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
@@ -25,14 +25,13 @@ int **alloc_grid(int width, int height)
 
 		if (ptr[row] == NULL)
 		{
-			for (i = row; i >= 0; i--)
-				free(ptr[i]);
+			/*If the assigned HEAP memory is NULL, free it for use.*/
+			free(ptr[row]);
 			free(ptr);
-			return (NULL);
-		}
 
-		for (col = 0; col < width; col++)
-			ptr[row][col] = 0;
+			for (col = 0; col < width; col++)
+				ptr[row][col] = 0;
+		}
 	}
 	return (ptr);
 }

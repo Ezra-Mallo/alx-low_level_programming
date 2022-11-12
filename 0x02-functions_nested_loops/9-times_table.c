@@ -20,7 +20,8 @@ void times_table(void)
 
 			if (r1 < 10)
 			{
-				_putchar(' ');
+				if (j>0)
+					_putchar(32);
 				_putchar(r2 + '0');
 			}
 			else if (r1 >= 10)
@@ -32,8 +33,8 @@ void times_table(void)
 			if (j < 9)
 				_putchar(','), _putchar(' ');
 
-			/** if (result < 10)
-				_putchar(' ');*/
+			if (j > 10)
+				_putchar(' ');
 		}
 		_putchar('\n');
 	}

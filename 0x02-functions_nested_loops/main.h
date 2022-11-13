@@ -1,6 +1,7 @@
 #ifndef _MAIN_HEADER_
 #define _MAIN_HEADER_
 
+#include <stdlib.h>
 int _putchar(char);
 void print_alphabet(void);
 void print_alphabet_x10(void);
@@ -16,5 +17,6 @@ int my_multiples(int n);
 void fibonacci(int n);
 void print_times_table(int n);
 void print_to_98(int n);
+int _putchar(char c);
 
 #endif

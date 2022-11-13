@@ -14,9 +14,7 @@ void print_times_table(int n)
 		{
 			for (j = 0; j <= n; j++)
 			{
-				r1 = i * j;
-				r2 = r1 % 10;
-				r3 = r1 / 10;
+				r1 = i * j, r2 = r1 % 10, r3 = r1 / 10;
 				if (r1 < 10)
 				{
 					if (j > 0 && r1 < 10)
@@ -31,8 +29,7 @@ void print_times_table(int n)
 				}
 				if (r1 >= 100)
 				{
-					r4 = (r1 / 100);
-					r3 = ((r1 - (r4 * 100)) / 10);
+					r4 = (r1 / 100), r3 = ((r1 - (r4 * 100)) / 10);
 					r2 = ((r1 - (r4 * 100)) - (r3 * 10));
 					_putchar(r4 + '0'), _putchar(r3 + '0'), _putchar(r2 + '0');
 				}
@@ -43,7 +40,6 @@ void print_times_table(int n)
 					else if (r1 >= 100)
 						_putchar(','), _putchar(' ');
 				}
-
 			}
 			_putchar('\n');
 		}

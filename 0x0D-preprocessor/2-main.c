@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include "main.h"
-
 #define PNAME __FILE__
 
 int main(void)

@@ -1,16 +1,28 @@
-#ifndef __MAIN_HEAD__
-#define __MAIN_HEAD__
-/**
- * struct dog - This is the struct
- * @name: First parameter
- * @age: Second parameter
- * @owner: Third parameter
- */
-struct dog
-{
-	char *name;
-	float age;
-	char *owner;
-};
+#include <stdio.h>
+#include "dog.h"
 
-#endif
+/**
+ * print_dog - Write a function that initialize a variable of type struct dog
+ * @d: First parameter
+ */
+void print_dog(struct dog *d)
+{
+	struct dog *ptr_dog;
+
+	ptr_dog = d;
+	if (ptr_dog != NULL)
+	{
+		if (ptr_dog->name == NULL)
+		{
+			printf("Name: nil\n");
+			printf("Age: nil\n");
+			printf("Owner: nil\n");
+		}
+		else
+		{
+			printf("Name: %s\n", ptr_dog->name);
+			printf("Age: %f\n", ptr_dog->age);
+			printf("Owner: %s\n", ptr_dog->owner);
+		}
+	}
+}

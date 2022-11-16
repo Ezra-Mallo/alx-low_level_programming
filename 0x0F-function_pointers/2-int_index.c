@@ -19,9 +19,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 		if (cmp(array[i]) != 0) /* test true i.e != 0  */
 		{
-			result = i;
+			return (i);
 			break;
 		}
 	}
-	return (result);
+	return (-1);
 }

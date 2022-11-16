@@ -1,4 +1,3 @@
-#include <stddef.h>
 #include "function_pointers.h"
 #include <stdio.h>
 
@@ -7,40 +6,20 @@
  * @array: First parameter
  * @size: Second parameter
  * @cmp: Third parameter
+ * Return: returns an int
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i, result;
 
-	if (size <= 0)
+	if (size <= 0 || array == NULL || cmp == NULL)
 		return (-1);
-
-	printf("%d", cmp);
 
 	for (i = 0; i < size; i++)
 	{
-		if (cmp(array[i]) == 98)
+		if (cmp(array[i]) != 0) /* test true i.e != 0  */
 		{
 			result = i;
-			printf("%d, %d\n", cmp(array[i]),  result);
-			break;
-		}
-		else if (cmp(array[i]) == -98)
-		{
-			result = i;
-			printf("%d, %d\n", cmp(array[i]),  result);
-			break;
-		}
-		else if (cmp(array[i]) > 0)
-		{
-			result = i;
-			printf("%d, %d\n", cmp(array[i]),  result);
-			break;
-		}
-		else
-		{
-			result = -1;
-			printf("%d, %d\n", cmp(array[i]),  result);
 			break;
 		}
 	}

@@ -15,15 +15,16 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	if (separator != NULL)
 	{
-		va_start(ap, n);	/*2nd macro va_start initialis arg list (va_list ap,count) */
+		/* 2nd macro va_start initialis arg list (va_list ap,count) */
+		va_start(ap, n);
 
 		for (i = 0; i < (int) n; i++)
 		{
-			printf("%d", va_arg(ap, int));            /* 3rd macro va_arg(ap, int) */
-			if (i < (int) (n-1))
-				printf("%s", separator);          /* 3rd macro va_arg(ap, int) */
+			printf("%d", va_arg(ap, int)); /* 3rd macro va_arg(ap, int) */
+			if (i < (int) (n - 1))
+				printf("%s", separator);/* 3rd macro va_arg(ap, int) */
 		}
-		va_end(ap);                               /* 4th macro va_end(ap) */
+		va_end(ap);                             /* 4th macro va_end(ap) */
 	}
 	printf("\n");
 }

@@ -12,7 +12,6 @@ int sum_them_all(const unsigned int n, ...)
 	int sum = 0;
 	va_list ap;	   /*1st macro declars va_list argument ptr (ap) */
 
-
 	if (n == 0)
 		return (0);
 

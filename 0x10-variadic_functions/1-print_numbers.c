@@ -9,7 +9,7 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	int i;
+	unsigned int i;
 	va_list ap;		/*1st macro declars arg list (va_list) to arg ptr(ap) */
 
 
@@ -18,10 +18,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		/* 2nd macro va_start initialis arg list (va_list ap,count) */
 		va_start(ap, n);
 
-		for (i = 0; i < (int) n; i++)
+		for (i = 0; i < n; i++)
 		{
 			printf("%d", va_arg(ap, int)); /* 3rd macro va_arg(ap, int) */
-			if (i < (int) (n - 1))
+			if (i != (n - 1))
 				printf("%s", separator);/* 3rd macro va_arg(ap, int) */
 		}
 		va_end(ap);                             /* 4th macro va_end(ap) */

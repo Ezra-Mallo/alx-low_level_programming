@@ -13,7 +13,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list ap;		/*1st macro declars arg list (va_list) to arg ptr(ap) */
 
 
-	if (separator != NULL)
+	if (separator != NULL && n != 0)
 	{
 		/* 2nd macro va_start initialis arg list (va_list ap,count) */
 		va_start(ap, n);

@@ -1,0 +1,23 @@
+#include "variadic_functions.h"
+
+/**
+ * sum_them_all - write a function that returns the sum of all its parameters
+ * @n: Parameter
+ * @...: Ellipsis
+ * @Return: Integer value
+ */
+int sum_them_all(const unsigned int n, ...)
+{
+	int i;
+	int sum = 0;
+	va_list ap;		/*1st macro declars arg list (va_list) to arg ptr(ap) */
+
+
+	va_start(ap, n);	/*2nd macro va_start initialis arg list (va_list ap,count) */
+	for (i = 0; i < (int) n; i++)
+		sum = sum + va_arg(ap, int); /* 3rd macro va_arg(ap, int) */
+
+	va_end(ap);                              /* 4th macro va_end(ap) */
+
+	return (sum);
+}

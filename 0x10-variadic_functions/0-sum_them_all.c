@@ -8,7 +8,7 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
-	int i;
+	unsigned int i;
 	int sum = 0;
 	va_list ap;	   /*1st macro declars va_list argument ptr (ap) */
 
@@ -17,7 +17,7 @@ int sum_them_all(const unsigned int n, ...)
 		return (0);
 
 	va_start(ap, n);   /*2nd macro va_start initialis va_start (ap, count)*/
-	for (i = 0; i < (int) n; i++)
+	for (i = 0; i < n; i++)
 		sum = sum + va_arg(ap, int); /* 3rd macro va_arg(ap, int) */
 
 	va_end(ap);                          /* 4th macro va_end(ap) */

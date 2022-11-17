@@ -25,6 +25,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 				printf("%s", separator);/* 3rd macro va_arg(ap, int) */
 		}
 		va_end(ap);                             /* 4th macro va_end(ap) */
-		printf("\n");
 	}
+	printf("\n");
 }

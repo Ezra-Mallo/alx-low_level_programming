@@ -54,7 +54,7 @@ int op_div(int a, int b)
 
 
 /**
- * op_add - for modulus division
+ * op_mod - for modulus division
  * @a: 1st parameter to be numerator
  * @b: 2nd parameter to be divisor
  * Return: result of the remender

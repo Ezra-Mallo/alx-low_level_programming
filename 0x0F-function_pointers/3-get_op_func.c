@@ -4,8 +4,7 @@
  * get_op_func - This file should contain the function that selects the
  *               correct function to perform the operation asked by the
  *               user. You’re not allowed to declare any other function.
- * @a: First parameter
- * @b: Second parameter
+ * @s: First parameter
  *
  * Return: Returns the operator
  */
@@ -21,7 +20,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 
 	int i = 0;
-	
+
 	while ((ops[i].op) != NULL && *(ops[i].op) != *s)
 		i++;
 

@@ -12,7 +12,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list ap;
 
 
-	if (strlen(separator) != 0 || separator == NULL)
+	if (separator != NULL)
 	{
 		va_start(ap, n);
 

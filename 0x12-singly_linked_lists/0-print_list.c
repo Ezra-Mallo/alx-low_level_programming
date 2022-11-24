@@ -11,7 +11,7 @@
 size_t print_list(const list_t *h)
 {
 	int i = 0;
-	const struct list_s* my_list = h;
+	const struct list_s *my_list = h;
 
 	while (my_list != NULL)
 	{

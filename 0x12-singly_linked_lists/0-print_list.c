@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  * print_list - This function prints the content of single linked list
@@ -11,6 +12,7 @@
 size_t print_list(const list_t *h)
 {
 	int i = 0;
+	int count;
 
 	const list_t *my_list;
 
@@ -23,7 +25,10 @@ size_t print_list(const list_t *h)
 			if (my_list->str == NULL)
 				printf("[0] (nil)\n");
 			else
-				printf("%s\n", my_list->str);
+			{
+				count = strlen(my_list->str);
+				printf("[%d] %s\n", count, my_list->str);
+			}
 			my_list = my_list->next;
 			i++;
 		}

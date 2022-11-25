@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_list - This is the funtion that prints the content of single list
+ * print_list - This function prints the content of single linked list
  *              If str is NULL, print [0] (nil)
  * @h: This is the list header
  * Return: This retruend an unsigned int of number of nodes
@@ -11,7 +11,10 @@
 size_t print_list(const list_t *h)
 {
 	int i = 0;
-	const struct list_s *my_list = h;
+
+	const list_t *my_list;
+
+	my_list = h;
 
 	while (my_list != NULL)
 	{

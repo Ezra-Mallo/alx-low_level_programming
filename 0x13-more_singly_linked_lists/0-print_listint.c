@@ -10,15 +10,10 @@ size_t print_listint(const listint_t *h)
 	const listint_t *my_print_list;
 	size_t i = 0;
 
-	my_print_list = malloc(sizeof(listint_t));
-
 	if (h == NULL)
 		return (0);
 
 	my_print_list = h;
-
-
-
 
 	while (my_print_list != NULL)
 	{

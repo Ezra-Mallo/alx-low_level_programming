@@ -8,7 +8,7 @@
 size_t print_listint(const listint_t *h)
 {
 	const listint_t *my_print_list;
-	unsigned int i = 0;
+	size_t i = 0;
 
 	my_print_list = malloc(sizeof(listint_t));
 
@@ -28,5 +28,4 @@ size_t print_listint(const listint_t *h)
 	}
 
 	return (i);
-
 }

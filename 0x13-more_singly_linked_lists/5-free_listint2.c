@@ -10,6 +10,9 @@ void free_listint2(listint_t **head)
 {
 	listint_t *buffer;
 
+	if (head == NULL)
+		return;
+
 	while (*head != NULL)
 	{
 		buffer = (*head)->next;
@@ -17,6 +20,7 @@ void free_listint2(listint_t **head)
 		*head = buffer;
 	}
 	head = NULL;
+	buffer = NULL;
 	free(head);
 	free(buffer);
 }

@@ -10,14 +10,19 @@ void free_listint(listint_t *head)
 {
 	listint_t *buffer;
 
-	while (head != NULL)
+	if (head == NULL)
+		return;
+	else if (head != NULL)
 	{
-		buffer = head->next;
+		while (head != NULL)
+		{
+			buffer = head->next;
+			free(head);
+			head = buffer;
+		}
+		head = NULL;
 		free(head);
-		head = buffer;
+		free(buffer);
 	}
-	head = NULL;
-	free(head);
-	free(buffer);
 
 }

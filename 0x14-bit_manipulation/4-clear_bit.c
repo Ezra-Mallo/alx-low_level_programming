@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * clear_bit - Write a function that sets the value of a bit to 0 at a given index
+ * clear_bit - Write a function that sets the value of a bit
+ *             to 0 at a given index
  * @n: is the parameter for the decimal number to be converted to binary
  * @index: 2nd parameter
  * Return: int value of the index

@@ -16,29 +16,23 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	if (n == 0)
 	{
+		dest[0] = 0;
+		i = 1;
 		return (-1);
 	}
-	else
+	val_div = 1;
+	i = 0;
+	while (val_div != 0)
 	{
-		val_div = 1;
-		i = 0;
-
-		while (val_div != 0)
-		{
-			remender = val_of_n % 2;
-			val_div = val_of_n / 2;
-
-			if (i == index)
-			{
-				dest[i] = 1;
-			}
-			else
-				dest[i] = remender;
-			val_of_n = val_div;
-			i++;
-		}
+		remender = val_of_n % 2;
+		val_div = val_of_n / 2;
+		if (i == index)
+			dest[i] = 1;
+		else
+			dest[i] = remender;
+		val_of_n = val_div;
+		i++;
 	}
-
 	for (k = i - 1; k >= 0; k--)
 	{
 		bit = dest[k];

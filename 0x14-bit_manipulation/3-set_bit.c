@@ -9,33 +9,49 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int val_div, i, val_of_n;
-	int power, j, k;
+	unsigned long int val_div, i, result, val_of_n;
+	int remender, bit, power, j, k;
+	int dest[50];
 
 	val_of_n = *n;
 
-	if (n == 0)
-		return (-1);
-	val_div = 1;
-	i = 0;
-
-	while (val_div != 0)
+	if (n == 0 && index == 0)
 	{
-		val_div = val_of_n / 2;
-
-		if (i == index)
-		{
-			k = i;
-		}
-		val_of_n = val_div;
-		i++;
+		dest[0] = 0;
+		i = 1;
+		return (-1);
 	}
-	val_of_n = *n;
+	else
+	{
+		val_div = 1;
+		i = 0;
 
-	power = 1;
-	for (j = 0; j < k; j++)
-		power = power * 2;
-	*n = power + val_of_n;
+		while (val_div != 0)
+		{
+			remender = val_of_n % 2;
+			val_div = val_of_n / 2;
 
-	return (1);
+			if (i == index)
+			{
+				dest[i] = 1;
+			}
+			else
+				dest[i] = remender;
+			val_of_n = val_div;
+			i++;
+		}
+	}
+	result = 0;
+
+	for (k = i - 1; k >= 0; k--)
+	{
+		bit = dest[k];
+		power = 1;
+		for (j = 0; j < k; j++)
+			power = power * 2;
+		result += power * bit;
+	}
+	*n = result;
+
+	return (*n);
 }

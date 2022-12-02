@@ -9,16 +9,15 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int val_div, j;
-	int remender, i, k;
+	unsigned long int val_div, i;
+	int remender;
 	unsigned int dest[50], my_return_val;
 
 	if (n == 0)
 	{
 		dest[0] = 0;
 		i = 1;
-			return (-1);
-
+		return (-1);
 	}
 	else
 	{
@@ -30,20 +29,16 @@ int get_bit(unsigned long int n, unsigned int index)
 			remender = n % 2;
 			val_div = n / 2;
 			dest[i] = remender;
+
+			if (i == index)
+			{
+				my_return_val = dest[i];
+				break;
+			}
+
 			n = val_div;
 			i++;
 		}
-	}
-
-	j = 0;
-	for (k = 0; k < i ; k++)
-	{
-		if (j == index)
-		{
-			my_return_val = dest[k];
-			break;
-		}
-		j++;
 	}
 	return (my_return_val);
 }

@@ -13,7 +13,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	int remender;
 	unsigned int dest[50], my_return_val;
 
-	if (n == 0 || index == 0)
+	if (n == 0 && index == 0)
 	{
 		dest[0] = 0;
 		i = 1;

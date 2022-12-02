@@ -14,7 +14,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	val_of_n = *n;
 
-	if (n == 0 && index == 0)
+	if (n == 0)
 		return (-1);
 	val_div = 1;
 	i = 0;
@@ -37,5 +37,5 @@ int set_bit(unsigned long int *n, unsigned int index)
 		power = power * 2;
 	*n = power + val_of_n;
 
-	return (*n);
+	return (1);
 }

@@ -15,7 +15,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	val_of_n = *n;
 
-	if (n == 0 && index == 0)
+	if (n == 0)
 	{
 		dest[0] = 0;
 		i = 1;

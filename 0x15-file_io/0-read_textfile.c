@@ -12,7 +12,7 @@ size_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char *buff = malloc(letters * sizeof(char));
-	size_t  r_count, w_count;
+	int  r_count, w_count;
 
 
 	if (filename == NULL || letters == 0)
@@ -25,6 +25,9 @@ size_t read_textfile(const char *filename, size_t letters)
 
 	r_count = read(fd, buff, letters);
 	w_count = write(1, buff, r_count);
+
+	if (r_count == -1 || w_count == -1)
+		return (0);
 
 	close(fd);
 	free(buff);

@@ -1,9 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <unistd.h>
 #include "main.h"
 
 /**
@@ -17,28 +11,28 @@
 size_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	char *buff = malloc(letters + 1);
-	size_t  n, i = 0;
+	char *buff = malloc(letters * sizeof(char) + 1);
+	size_t  r_count = 0, w_count;
 
 
-	if (filename == NULL)
+	if (filename == NULL || letters == 0)
 		return (0);
 
 	fd = open(filename, O_RDONLY);
-	if (fd == -1)
-	{
-		printf("Faileid to create and write to the file");
-		exit(1);
-	}
 
-	read(fd, buff, letters);
-	buff[letters] = '\0';
-	while (buff[i])
-	{
-		/*n += write(1, (&buff[i]), 1);*/
-		n = printf("%s", buff);
-		i++;
-	}
-	return (n);
+	if (fd == -1)
+		return (0);
+
+
+	r_count = read(fd, buff, letters);
+	close(fd);
+
+
+
+	w_count = write(1, buff, r_count);
+	close(fd);
+	free(buff);
+
+	return (w_count);
 
 }

@@ -11,8 +11,8 @@
 size_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	char *buff = malloc(letters * sizeof(char) + 1);
-	size_t  r_count = 0, w_count;
+	char *buff = malloc(letters * sizeof(char));
+	size_t  r_count, w_count;
 
 
 	if (filename == NULL || letters == 0)
@@ -20,16 +20,12 @@ size_t read_textfile(const char *filename, size_t letters)
 
 	fd = open(filename, O_RDONLY);
 
-	if (fd == -1)
+	if (fd == -1 || fd == 2)
 		return (0);
 
-
 	r_count = read(fd, buff, letters);
-	close(fd);
-
-
-
 	w_count = write(1, buff, r_count);
+
 	close(fd);
 	free(buff);
 

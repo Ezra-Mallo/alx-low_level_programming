@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <math.h>
 #include "main.h"
 
 /**
@@ -7,30 +9,36 @@
  */
 int _atoi(char *s)
 {
-	int count;
+	int i = 0, num;
+	int count = 0, sum = 0;
+	int exp;
 	char null_char;
-	int i, j;
-	int sum, m, tens;
-
+	char* nu[];
+	
 	null_char = 'x';
-	count = 0;
+
 
 	while (null_char != '\0')
 	{
 		null_char = *(s + count);
+
 		count = count + 1;
+		if (null_char >= 48 && null_char <= 57)
+		{
+			num = null_char - '0';
+			nu[i]= num;
+			printf("j= %d, num = %d", i, num);
+			putchar('\n');
+			exp = (int)pow(10, i);
+			sum = sum + (exp * num);
+			i++;
+		}
 	}
-	count -= 2;
-	sum = 0;
 
-	for (i = 0; i < count; i++)
+	while (null_char != '\0')
 	{
-		tens =  *(s + i);
-		m = count - i;
-
-		for (j = m; j > 0; j++)
-			tens *= 10;
-		sum = sum + tens;
+		printf(nu[]);
 	}
+
 	return (sum);
 }

@@ -17,16 +17,25 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (head != NULL)
 	{
-		buffer = malloc(sizeof(listint_t));
+		buffer = *head; /*malloc(sizeof(listint_t));*/
 
-		while (i < idx)
+
+		while (head != NULL)
 		{
-			buffer = (*head)->next;
-			*head = buffer;
+			if (i != idx - 1)
+			{
+				buffer->n = (*head)->n;
+				buffer->next = (*head)->next;
+			}
+			else if (i == idx - 1)
+			{
+				printf("%ld,  %d\n", i, idx);
+				buffer->n = n;
+				buffer->next = buffer;
+			}
 			i++;
 		}
-		(*head)->n = n;
-		buffer = *head;
+		buffer->next = *head;
 		*head = buffer;
 		return (*head);
 

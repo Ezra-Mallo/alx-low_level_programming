@@ -7,7 +7,7 @@ extern char **environ;
  */
 char *_getline(void)
 {
-	size_t n = 0;
+	size_t n = 10;
 	char *buff = NULL, *copy_of_buff = NULL,  *token, *delimeter = " \n";
 	struct stat st;
 
@@ -24,7 +24,7 @@ char *_getline(void)
 			token = strtok(copy_of_buff, delimeter);
 			if (stat(token, &st) == 0)
 			{
-				_strtokenization(buff);
+				_tokenize(buff);
 				continue;
 			}
 			if (strcmp(token, "exit") == 0)
@@ -34,6 +34,11 @@ char *_getline(void)
 				buff = NULL, free(buff);
 				break;
 			}
+			if (strcmp(token, "cd") == 0)
+
+
+
+					)
 			printf("\n\n%s: NOT FOUND.\n\n", token);
 		}
 		token = NULL, free(token);

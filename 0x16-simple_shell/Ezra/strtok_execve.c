@@ -2,11 +2,11 @@
 extern char **environ;
 
 /**
- * _strtokenization - this is the prompt and getline function for simple shell
+ * _tokenize - this is the prompt and getline function for simple shell
  * @buff: environment variable
  * Return: pointer to the getline data
  */
-char *_strtokenization(char *buff)
+char *_tokenize(char *buff)
 {
 	char *token, **argv = NULL, *delimeter = " \n";
 	int i = 0, status;

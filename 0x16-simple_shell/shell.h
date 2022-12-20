@@ -10,8 +10,9 @@
 #include <stdlib.h>
 
 char *_getline(void);
-int _execve(char *token);
-char *_strtokenization(char *buff);
+char *_tokenize(char *buff);
+char *_execve(char **argv);
+void _env(char *buff, char **argv);
 
 
 

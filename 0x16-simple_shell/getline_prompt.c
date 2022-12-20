@@ -1,4 +1,5 @@
 #include "shell.h"
+extern char **environ;
 
 /**
  * _getline - this is the prompt and getline function for simple shell

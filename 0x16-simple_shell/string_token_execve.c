@@ -30,7 +30,7 @@ char *_strtokenization(char *buff)
 	}
 	if (child_pid == 0)
 	{
-		execve(argv[0], argv, NULL);
+		execve(argv[0], argv, environ);
 		sleep(4);
 	}
 	else

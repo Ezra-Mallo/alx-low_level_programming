@@ -19,10 +19,13 @@ char *_execve(char **argv)
 	}
 	if (child_pid == 0)
 	{
-		execve(argv[0], argv, environ);
+		printf("[%d] [%d]\n", getppid(), getpid());
+		execve(argv[0], argv, NULL);
 		sleep(4);
+
 	}
 	wait(&status);
+	kill(child_pid, SIGKILL);
 	return ("Done");
 }
 

@@ -7,25 +7,22 @@
  */
 char *_tokenize(char *buff)
 {
-	char *token, **argv = NULL, *delimeter = " \n";
+	char *tokens, **argv = NULL, *delimeter = " \n";
 	int i = 0;
 
 	argv = malloc((sizeof(char) * strlen(buff)) * 2);
-	token = strtok(buff, delimeter);
-
-	while (token != NULL)
+	tokens = strtok(buff, delimeter);
+	while (tokens != NULL)
 	{
-		argv[i] = token;
-		token = strtok(NULL, delimeter);
+		argv[i] = tokens;
+		tokens = strtok(NULL, delimeter);
 		i++;
 	}
+	/*call stat_env function*/
+	_env(buff, argv);
 
-	void env(buff, argv);
-
-	/*_execve(argv);*/
-
-	token =  NULL, free(token);
-	argv =  NULL, free(argv);
+	tokens = NULL;
+	delimeter = NULL;
+	free(argv);
 	return ("done");
 }
-

@@ -1,12 +1,14 @@
 #include "shell.h"
 
 /**
- * _env - this is the prompt and getline function for simple shell
+ * _check_stat_environ - this function checks the token against
+ *                       stat structure and environ struct
  * @buff: the buffer
  * @argv: the argv
  * Return: pointer to the getline data
  */
-char *_env(char *buff, char **argv)
+char *_check_stat_environ(char *buff, char **argv)
+
 {
 	int i = 0;
 	char *token = NULL, *key = "PATH", *path = NULL, **env_cpy = NULL;
@@ -48,6 +50,7 @@ char *_env(char *buff, char **argv)
 		{
 			argv[0] = strdup(path);
 			_execve(argv);
+
 			flag = 1;
 			env_cpy = NULL,  path = NULL;
 			break;

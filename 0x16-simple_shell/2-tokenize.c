@@ -19,7 +19,7 @@ char *_tokenize(char *buff)
 		i++;
 	}
 	/*call stat_env function*/
-	_env(buff, argv);
+	_check_stat_environ(buff, argv);
 
 	tokens = NULL;
 	delimeter = NULL;

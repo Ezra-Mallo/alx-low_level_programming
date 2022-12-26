@@ -26,6 +26,15 @@ void print_error(vars_t *vars, char *msg)
 		perror("");
 }
 
+
+
+
+
+
+
+
+
+
 /**
  * _puts2 - prints a string to standard error
  * @str: string to print
@@ -45,6 +54,16 @@ void _puts2(char *str)
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
 
 /**
  * _uitoa - converts an unsigned int to a string

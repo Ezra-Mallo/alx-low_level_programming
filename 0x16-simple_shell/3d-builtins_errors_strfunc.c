@@ -20,6 +20,16 @@ ssize_t _puts(char *str)
 	return (len);
 }
 
+
+
+
+
+
+
+
+
+
+
 /**
  * _strdup - returns pointer to new mem alloc space which contains copy
  * @strtodup: string to be duplicated
@@ -45,6 +55,19 @@ char *_strdup(char *strtodup)
 	return (copy);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * _strcmpr - compares two strings
  * @strcmp1: first string, of two, to be compared in length
@@ -64,6 +87,14 @@ int _strcmpr(char *strcmp1, char *strcmp2)
 	}
 	return (strcmp1[i] - strcmp2[i]);
 }
+
+
+
+
+
+
+
+
 
 /**
  * _strcat - concatenates two strings
@@ -105,6 +136,17 @@ char *_strcat(char *strc1, char *strc2)
 	newstring[len1 + len2 + 1] = '\0';
 	return (newstring);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * _strlen - returns the length of a string

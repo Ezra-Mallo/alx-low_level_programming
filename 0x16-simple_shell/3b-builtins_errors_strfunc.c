@@ -38,6 +38,13 @@ void add_key(vars_t *vars)
 	vars->env = newenv;
 }
 
+
+
+
+
+
+
+
 /**
  * find_key - finds an environment variable
  * @env: array of environment variables
@@ -60,6 +67,15 @@ char **find_key(char **env, char *key)
 	}
 	return (NULL);
 }
+
+
+
+
+
+
+
+
+
 
 /**
  * add_value - create a new environment variable string
@@ -86,6 +102,17 @@ char *add_value(char *key, char *value)
 	new[i + 1 + j] = '\0';
 	return (new);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * _atoi - converts a string into an integer

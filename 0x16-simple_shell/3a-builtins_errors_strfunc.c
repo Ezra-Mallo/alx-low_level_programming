@@ -27,6 +27,14 @@ void (*check_for_builtins(vars_t *vars))(vars_t *vars)
 	return (check[i].f);
 }
 
+
+
+
+
+
+
+
+
 /**
  * new_exit - exit program
  * @vars: variables
@@ -59,6 +67,14 @@ void new_exit(vars_t *vars)
 	exit(vars->status);
 }
 
+
+
+
+
+
+
+
+
 /**
  * _env - prints the current environment
  * @vars: struct of variables
@@ -76,6 +92,17 @@ void _env(vars_t *vars)
 	}
 	vars->status = 0;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * new_setenv - create a new environment variable, or edit an existing variable
@@ -114,6 +141,15 @@ void new_setenv(vars_t *vars)
 	}
 	vars->status = 0;
 }
+
+
+
+
+
+
+
+
+
 
 /**
  * new_unsetenv - remove an environment variable

@@ -3,7 +3,7 @@
 /* 2-add_dnodeint.c */
 
 /**
- * add_dnodeint - Function that adds a new node at the beginning of a  lis 
+ * add_dnodeint - Function that adds a new node at the beginning of a  list
  * @head: header
  * @n: number to be added
  *
@@ -32,6 +32,5 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		last = last->next;
 	last->next = new;
 	new->prev = last;
-
 	return (new);
 }

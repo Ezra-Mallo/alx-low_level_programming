@@ -3,7 +3,6 @@ CC = gcc
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM: rm -f
-variables: CC, SRC, OBJ, NAME, RM
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
@@ -14,8 +13,6 @@ clean:
 oclean :
 	$(RM) $(OBJ)
 
-fclean:
-	clean oclean
+fclean: clean oclean
 
-re:
-	oclean all
+re: oclean all

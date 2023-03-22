@@ -1,0 +1,2 @@
+School: all
+	gcc *.c` -o school

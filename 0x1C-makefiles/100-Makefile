@@ -16,4 +16,4 @@ oclean :
 
 fclean : clean oclean $(NAME)
 
-re : all
+re : oclean all

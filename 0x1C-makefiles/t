@@ -1,0 +1,57 @@
+
+; <<>> DiG 9.16.1-Ubuntu <<>> cname google.com A
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43218
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;google.com.			IN	A
+
+;; ANSWER SECTION:
+google.com.		193	IN	A	216.58.223.238
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Thu Mar 23 21:16:01 WAT 2023
+;; MSG SIZE  rcvd: 55
+
+
+; <<>> DiG 9.16.1-Ubuntu <<>> cname google.com AAAA
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 6606
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;google.com.			IN	AAAA
+
+;; ANSWER SECTION:
+google.com.		154	IN	AAAA	2c0f:fb50:4003:802::200e
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Thu Mar 23 21:16:05 WAT 2023
+;; MSG SIZE  rcvd: 67
+
+
+; <<>> DiG 9.16.1-Ubuntu <<>> cname google.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 5651
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;google.com.			IN	CNAME
+
+;; Query time: 88 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53)
+;; WHEN: Thu Mar 23 21:16:10 WAT 2023
+;; MSG SIZE  rcvd: 39
+

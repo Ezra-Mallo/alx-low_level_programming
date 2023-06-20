@@ -9,36 +9,21 @@
  */
 int _atoi(char *s)
 {
-	int i = 0, num;
-	int count = 0, sum = 0;
-	int exp;
-	char null_char;
-	char* nu[];
-	
-	null_char = 'x';
+	int sign = 1;
+	unsigned int num = 0;
 
-
-	while (null_char != '\0')
+	while (*s++)
 	{
-		null_char = *(s + count);
+		if (*s == '-')
+			sign *= -1;
 
-		count = count + 1;
-		if (null_char >= 48 && null_char <= 57)
-		{
-			num = null_char - '0';
-			nu[i]= num;
-			printf("j= %d, num = %d", i, num);
-			putchar('\n');
-			exp = (int)pow(10, i);
-			sum = sum + (exp * num);
-			i++;
-		}
-	}
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
 
-	while (null_char != '\0')
-	{
-		printf(nu[]);
-	}
+		else if (num > 0)
+			break;
 
-	return (sum);
+	};
+
+	return (num * sign);
 }

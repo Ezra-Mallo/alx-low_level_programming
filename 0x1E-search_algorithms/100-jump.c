@@ -1,7 +1,7 @@
 #include "search_algos.h"
 /**
- * jump_search - searches for a value in an array of
- * integers using the Jump search algorithm
+ * jump_search - function that searches for a value in a sorted array of
+ *                integers using the Jump search algorithm
  *
  * @array: input array
  * @size: size of the array
@@ -20,7 +20,8 @@ int jump_search(int *array, size_t size, int value)
 	prev = index = 0;
 
 	do {
-		printf("Value checked array[%d] = [%d]\n", index, array[index]);
+		printf("Value checked array[%d] = [%d]\n", index,
+				array[index]);
 
 		if (array[index] == value)
 			return (index);
